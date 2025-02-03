@@ -15,6 +15,14 @@ header {
 }
 
 
+#tech-stack ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+}
+
+#tech-stack li {
+    margin-bottom: 8px; /* Adds spacing between items */
+}
 
 
 section {

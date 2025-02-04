@@ -2,42 +2,33 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #ffffff, #fad0c4);
-    color: #333;
+    background: linear-gradient(to bottom, #121212, #1e1e1e);
+    color: #f1f1f1;
     text-align: center;
 }
 
 header {
-    color: rgb(0, 0, 0);
+    background: #1e1e1e;
+    color: #ffffff;
     padding: 20px;
     font-size: 1.5rem;
     animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 }
-
-
-#tech-stack ul {
-    list-style-type: none; /* Removes bullet points */
-    padding: 0; /* Removes default padding */
-}
-
-#tech-stack li {
-    margin-bottom: 8px; /* Adds spacing between items */
-}
-
 
 section {
     padding: 50px;
     max-width: 900px;
     margin: auto;
-    background: white;
+    background: #222222;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05);
     margin-top: 20px;
     animation: fadeInUp 1s ease-in-out;
 }
 
 .project {
-    background: #ffcccb;
+    background: #333333;
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
@@ -46,24 +37,44 @@ section {
 
 .project:hover {
     transform: scale(1.05);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.1);
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background: #ff4e50;
-    color: white;
+    background: #121212;
+    color: #ffffff;
     margin-top: 20px;
 }
 
 a {
-    color: #007bff;
+    color: #66ccff;
     font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #ff4081;
+    color: #ff79c6;
+    text-decoration: underline;
+}
+
+/* Resume Button */
+.resume-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background: #007acc;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.resume-button:hover {
+    background: #005f99;
 }
 
 /* Animations */
@@ -75,4 +86,13 @@ a:hover {
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tech Stack Items */
+.tech-item {
+    background: #2a2a2a;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 5px 0;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.05);
 }

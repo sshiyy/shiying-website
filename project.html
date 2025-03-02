@@ -35,6 +35,36 @@
       border-radius: 8px;
       position: relative;
     }
+    .tech-stack {
+      background-color: #ffffff;
+      border-radius: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 300px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tech-stack span {
+      background-color: #f8bad1; /* Pink background */
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    /* For stacking links vertically */
+.project-links {
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  gap: 10px;
+}
+
+.project-links a {
+  display: block; /* Make each link take full width */
+}
+
   </style>
 </head>
 <body>
@@ -86,50 +116,80 @@
       <div class="project" data-modal="#modal-project1">
         <h3>🎬 Movie Application</h3>
         <p>A Southeast Asia movie app that showcases movie details, trailers, and ratings.</p>
-        <p><strong>🛠️ Tech Stack: HTML, CSS, MySQL</strong></p>
-        <a href="https://github.com/yihong-0-6/BED2024Apr_P04_T4" target="_blank">🔗 View Sourcecode</a>
+        <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>MySQL</span>
+          </div>
+        <a href="https://github.com/yihong-0-6/BED2024Apr_P04_T4" target="_blank">🔗 View Source Code</a>
       </div>
       <!-- Project 2 -->
       <div class="project" data-modal="#modal-project2">
         <h3>☕ Eric Chou Café</h3>
         <p>A café management system inspired by Eric Chou.</p>
-        <p><strong>🛠️ Tech Stack: HTML, CSS</strong></p>
-        <a href="https://sshiyy.github.io/fed-assignment-2/" target="_blank">🔗 View Project</a>
+        <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://sshiyy.github.io/fed-assignment-2/" target="_blank">🔗 View Project</a>
+            <a href="https://github.com/sshiyy/fed-assignment-2" target="_blank">🔗 View Source Code</a>
+          </div>
       </div>
       <!-- Project 3 -->
       <div class="project" data-modal="#modal-project3">
         <h3>🍦 Ice Cream Shop Ordering System</h3>
         <p>An interactive ordering system for an ice cream shop.</p>
-        <p><strong>🛠️ Tech Stack: C#</strong></p>
-        <a href="https://github.com/sshiyy/prg_assignment" target="_blank">🔗 View Sourcecode</a>
+        <div class="tech-stack">
+            <span>C#</span>
+          </div>
+        <a href="https://github.com/sshiyy/prg_assignment" target="_blank">🔗 View Source Code</a>
       </div>
       <!-- Project 4 -->
       <div class="project" data-modal="#modal-project4">
         <h3>🍱 F&amp;B App</h3>
         <p>A full-fledged F&amp;B app for food ordering and menu management.</p>
-        <p><strong>🛠️ Tech Stack: Java, Android Studio, Firebase</strong></p>
-        <a href="https://github.com/sshiyy/MAD24_P01_Team4" target="_blank">🔗 View Sourcecode</a>
+        <div class="tech-stack">
+            <span>Java</span>
+            <span>Android Studio</span>
+            <span>Firebase</span>
+          </div>
+        <a href="https://github.com/sshiyy/MAD24_P01_Team4" target="_blank">🔗 View Source Code</a>
       </div>
       <!-- Project 5 -->
       <div class="project" data-modal="#modal-project5">
         <h3>💄 Beauty &amp; Skincare Web</h3>
         <p>An e-commerce platform for browsing and purchasing beauty products.</p>
-        <p><strong>🛠️ Tech Stack: HTML, CSS</strong></p>
-        <a href="https://sshiyy.github.io/assessment-1/" target="_blank">🔗 View Project</a>
+        <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://sshiyy.github.io/assessment-1/" target="_blank">🔗 View Project</a>
+            <a href="https://github.com/sshiyy/assessment-1" target="_blank">🔗 View Source Code</a>
+          </div>
       </div>
       <!-- Project 6 -->
       <div class="project" data-modal="#modal-project6">
         <h3>🍔 F&amp;B Queuing App</h3>
         <p>An app that provides queue times for F&amp;B shops and pre-ordering options.</p>
-        <p><strong>🛠️ Tech Stack: Figma (UI/UX Prototype)</strong></p>
+        <div class="tech-stack">
+            <span>Figma</span>
+          </div>
         <a href="https://www.figma.com/proto/22A31137Ri30IMp4THuuxK/DUX_Assg1_P04_TamShiYing?node-id=4-4" target="_blank">🔗 View Prototype</a>
       </div>
       <!-- Project 7 -->
       <div class="project" data-modal="#modal-project7">
         <h3>🏧 ATM Withdrawal System</h3>
         <p>A secure and efficient ATM withdrawal system with advanced features.</p>
-        <p><strong>🛠️ Tech Stack: Node.js, Firebase, Express, React.js, JavaScript</strong></p>
-        <a href="https://github.com/Ian-NP/FSDPAssg_P04_Grp3" target="_blank">🔗 View Project</a>
+        <div class="tech-stack">
+            <span>Node.js</span>
+            <span>Firebase</span>
+            <span>Express</span>
+            <span>React.js</span>
+            <span>JavaScript</span>
+          </div>
+        <a href="https://github.com/Ian-NP/FSDPAssg_P04_Grp3" target="_blank">🔗 View Source Code</a>
       </div>
     </div>
   </section>

@@ -31,7 +31,6 @@
     }
 
     .skill-circle svg {
-      transform: rotate(-90deg);
       width: 120px; /* Increased size */
       height: 120px; /* Increased size */
     }
@@ -43,15 +42,14 @@
       stroke-width: 12; /* Increased stroke width */
     }
 
-    /* The colored circle that shows progress */
     .skill-circle circle.progress {
       fill: none;
-      stroke-width: 12; /* Increased stroke width */
+      stroke-width: 12;
       stroke-linecap: round;
-      stroke: #f8bad1; /* Adjust color if you want a different accent */
-      stroke-dasharray: 226; /* 2 * PI * 36 ~ 226 */
-      stroke-dashoffset: 226; /* fully hidden default */
-      transition: stroke-dashoffset 1s ease;
+      stroke: #f8bad1;
+      stroke-dasharray: 339.29;
+      stroke-dashoffset: 339.29;
+      transition: stroke-dashoffset 2s ease;
     }
 
     /* Centered text inside the circle */
@@ -119,7 +117,7 @@
       margin-top: 10px;
     }
 
-    /* Soft Skills Section */
+   /* Soft Skills Section */
   #skills {
     margin-top: 50px; /* Adjust the gap from the top */
   }
@@ -182,6 +180,9 @@
     color: #666;
   }
 
+
+
+
   </style>
 </head>
 <body>
@@ -235,82 +236,78 @@
     </div>
   </section>
 
-  <!-- Soft Skills & Strengths -->
-  <section class="main-content container">
-    <h2>💻 Technical Proficiency</h2>
-    <div class="tech-proficiency">
-      <!-- Circle #1 -->
-      <div class="skill-circle">
-        <svg>
-          <circle class="bg" cx="60" cy="60" r="54"></circle>
-          <!-- 95% => offset = 226 - (226 * 95 / 100) ~ 11.3 -->
-          <circle
-            class="progress"
-            cx="60" cy="60" r="54"
-            style="stroke-dashoffset: calc(226 - (226 * 95) / 100);"
-          ></circle>
-        </svg>
-        <div class="skill-text">95%</div>
-        <div class="skill-label">Programming</div>
-      </div>
-      <!-- Circle #2 -->
-      <div class="skill-circle">
-        <svg>
-          <circle class="bg" cx="60" cy="60" r="54"></circle>
-          <!-- 80% => offset = 226 - (226 * 80 / 100) ~ 45.2 -->
-          <circle
-            class="progress"
-            cx="60" cy="60" r="54"
-            style="stroke-dashoffset: calc(226 - (226 * 80) / 100);"
-          ></circle>
-        </svg>
-        <div class="skill-text">80%</div>
-        <div class="skill-label">Web Development</div>
-      </div>
-      <!-- Circle #3 -->
-      <div class="skill-circle">
-        <svg>
-          <circle class="bg" cx="60" cy="60" r="54"></circle>
-          <!-- 90% => offset = 226 - (226 * 90 / 100) ~ 22.6 -->
-          <circle
-            class="progress"
-            cx="60" cy="60" r="54"
-            style="stroke-dashoffset: calc(226 - (226 * 90) / 100);"
-          ></circle>
-        </svg>
-        <div class="skill-text">90%</div>
-        <div class="skill-label">Mobile Development</div>
-      </div>
-      <!-- Circle #4 -->
-      <div class="skill-circle">
-        <svg>
-          <circle class="bg" cx="60" cy="60" r="54"></circle>
-          <!-- 75% => offset = 226 - (226 * 75 / 100) ~ 56.5 -->
-          <circle
-            class="progress"
-            cx="60" cy="60" r="54"
-            style="stroke-dashoffset: calc(226 - (226 * 75) / 100);"
-          ></circle>
-        </svg>
-        <div class="skill-text">75%</div>
-        <div class="skill-label">Database</div>
-      </div>
-      <!-- Circle #5 -->
-      <div class="skill-circle">
-        <svg>
-          <circle class="bg" cx="60" cy="60" r="54"></circle>
-          <!-- 60% => offset = 226 - (226 * 60) / 100 = ~90.4 -->
-          <circle
-            class="progress"
-            cx="60" cy="60" r="54"
-            style="stroke-dashoffset: calc(226 - (226 * 60) / 100);"
-          ></circle>
-        </svg>
-        <div class="skill-text">60%</div>
-        <div class="skill-label">UI/UX</div>
-      </div>
-    </div>
-  </section>
+    <!-- Technical Proficiency Section -->
+    <section class="main-content container">
+        <h2>💻 Technical Proficiency</h2>
+        <div class="tech-proficiency">
+          <!-- Circle #1: Programming (85%) -->
+          <div class="skill-circle">
+            <svg width="120" height="120">
+              <circle class="bg" cx="60" cy="60" r="54" stroke-width="20"></circle>
+              <circle class="progress" cx="60" cy="60" r="54" stroke-width="20"></circle>
+            </svg>
+            <div class="skill-text">85%</div>
+            <div class="skill-label">Programming</div>
+          </div>
+          <!-- Circle #2: Web Development (90%) -->
+          <div class="skill-circle">
+            <svg width="120" height="120">
+              <circle class="bg" cx="60" cy="60" r="54" stroke-width="20"></circle>
+              <circle class="progress" cx="60" cy="60" r="54" stroke-width="20"></circle>
+            </svg>
+            <div class="skill-text">90%</div>
+            <div class="skill-label">Web Development</div>
+          </div>
+          <!-- Circle #3: Mobile Development (90%) -->
+          <div class="skill-circle">
+            <svg width="120" height="120">
+              <circle class="bg" cx="60" cy="60" r="54" stroke-width="20"></circle>
+              <circle class="progress" cx="60" cy="60" r="54" stroke-width="20"></circle>
+            </svg>
+            <div class="skill-text">90%</div>
+            <div class="skill-label">Mobile Development</div>
+          </div>
+          <!-- Circle #4: Database (85%) -->
+          <div class="skill-circle">
+            <svg width="120" height="120">
+              <circle class="bg" cx="60" cy="60" r="54" stroke-width="20"></circle>
+              <circle class="progress" cx="60" cy="60" r="54" stroke-width="20"></circle>
+            </svg>
+            <div class="skill-text">85%</div>
+            <div class="skill-label">Database</div>
+          </div>
+          <!-- Circle #5: UI/UX (95%) -->
+          <div class="skill-circle">
+            <svg width="120" height="120">
+              <circle class="bg" cx="60" cy="60" r="54" stroke-width="20"></circle>
+              <circle class="progress" cx="60" cy="60" r="54" stroke-width="20"></circle>
+            </svg>
+            <div class="skill-text">95%</div>
+            <div class="skill-label">UI/UX</div>
+          </div>
+        </div>
+      </section>
+    
+      <script>
+        // Function to calculate stroke-dashoffset based on percentage
+        function getDashOffset(percentage) {
+          const maxOffset = 339.29;  // Full circle circumference (2 * PI * r)
+          return maxOffset - (maxOffset * percentage / 100); 
+        }
+    
+        // Animate circles on page load
+        window.addEventListener('load', function() {
+          const circles = document.querySelectorAll('.skill-circle .progress');
+    
+          // Set stroke-dashoffset for each circle
+          circles[0].style.strokeDashoffset = getDashOffset(85); // Programming 85%
+          circles[1].style.strokeDashoffset = getDashOffset(90); // Web Development 90%
+          circles[2].style.strokeDashoffset = getDashOffset(90); // Mobile Development 90%
+          circles[3].style.strokeDashoffset = getDashOffset(85); // Database 85%
+          circles[4].style.strokeDashoffset = getDashOffset(95); // UI/UX 95%
+        });
+      </script>
+    
 
   <!-- Tools & Technologies Section -->
   <section class="main-content container">

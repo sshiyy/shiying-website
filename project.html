@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Tam Shi Ying</title>
+  <!-- Include Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Hero Section with Navigation -->
+  <section class="hero">
+    <nav class="navbar container">
+      <!-- Left: Logo -->
+      <div class="logo">Tam Shi Ying</div>
+
+      <!-- Center: Navigation Menu -->
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="project.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+      </ul>
+
+      <!-- Right: Social Icons -->
+      <div class="nav-icons">
+        <a href="https://www.linkedin.com/in/shi-ying-tam-44abb6272/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/sshiyy" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:shiyingtam06@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <!-- Animated Sliding Marker -->
+      <div class="nav-marker"></div>
+    </nav>
+
+    <!-- Hero Content (Text Only) -->
+    <div class="hero-content container">
+      <div class="hero-left">
+        <!-- Decorative vertical line with a dot (optional) -->
+        <div class="decorative-line">
+          <div class="dot"></div>
+        </div>
+        <h1>Projects</h1>
+        <p>
+          Explore some of my projects where I apply my passion for software engineering to solve real-world problems.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content: Projects Grid -->
+  <section class="main-content container" id="projects">
+    <div class="project-grid">
+      <div class="project">
+        <h3>🎬 Movie Application</h3>
+        <p>A Southeast Asia movie app that showcases movie details, trailers, and ratings.</p>
+        <p><strong>🛠️ Tech Stack: HTML, CSS, MySQL</strong></p>
+        <a href="https://github.com/yihong-0-6/BED2024Apr_P04_T4" target="_blank">🔗 View Project</a>
+      </div>
+      <div class="project">
+        <h3>☕ Eric Chou Café</h3>
+        <p>A café management system inspired by Eric Chou.</p>
+        <p><strong>🛠️ Tech Stack: HTML, CSS</strong></p>
+        <a href="https://sshiyy.github.io/fed-assignment-2/" target="_blank">🔗 View Project</a>
+      </div>
+      <div class="project">
+        <h3>🍦 Ice Cream Shop Ordering System</h3>
+        <p>An interactive ordering system for an ice cream shop.</p>
+        <p><strong>🛠️ Tech Stack: C#</strong></p>
+        <a href="https://github.com/sshiyy/prg_assignment" target="_blank">🔗 View Project</a>
+      </div>
+      <div class="project">
+        <h3>🍱 F&amp;B App</h3>
+        <p>A full-fledged F&amp;B app for food ordering and menu management.</p>
+        <p><strong>🛠️ Tech Stack: Java, Android Studio, Firebase</strong></p>
+        <a href="https://github.com/sshiyy/MAD24_P01_Team4" target="_blank">🔗 View Project</a>
+      </div>
+      <div class="project">
+        <h3>💄 Beauty &amp; Skincare Web</h3>
+        <p>An e-commerce platform for browsing and purchasing beauty products.</p>
+        <p><strong>🛠️ Tech Stack: HTML, CSS</strong></p>
+        <a href="https://sshiyy.github.io/assessment-1/" target="_blank">🔗 View Project</a>
+      </div>
+      <div class="project">
+        <h3>🍔 F&amp;B Queuing App</h3>
+        <p>An app that provides queue times for F&amp;B shops and pre-ordering options.</p>
+        <p><strong>🛠️ Tech Stack: Figma (UI/UX Prototype)</strong></p>
+        <a href="https://www.figma.com/proto/22A31137Ri30IMp4THuuxK/DUX_Assg1_P04_TamShiYing?node-id=4-4" target="_blank">🔗 View Project</a>
+      </div>
+      <div class="project">
+        <h3>🏧 ATM Withdrawal System</h3>
+        <p>A secure and efficient ATM withdrawal system with advanced features.</p>
+        <p><strong>🛠️ Tech Stack: Node.js, Firebase, Express, React.js, JavaScript</strong></p>
+        <a href="https://github.com/Ian-NP/FSDPAssg_P04_Grp3" target="_blank">🔗 View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Animated Sliding Marker Script
+    const navMenu = document.querySelector('.nav-menu');
+    const marker = document.querySelector('.nav-marker');
+    const navItems = document.querySelectorAll('.nav-menu li');
+
+    function updateMarker(element) {
+      marker.style.left = element.offsetLeft + 'px';
+      marker.style.width = element.offsetWidth + 'px';
+    }
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        updateMarker(item);
+      });
+    });
+
+    window.addEventListener('load', () => {
+      const activeItem = document.querySelector('.nav-menu li.active');
+      if (activeItem) updateMarker(activeItem);
+    });
+
+    window.addEventListener('resize', () => {
+      const activeItem = document.querySelector('.nav-menu li.active');
+      if (activeItem) updateMarker(activeItem);
+    });
+  </script>
+</body>
+</html>

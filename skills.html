@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills | Tam Shi Ying</title>
+  <!-- Include Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Hero Section with Navigation -->
+  <section class="hero">
+    <nav class="navbar container">
+      <!-- Left: Logo -->
+      <div class="logo">Tam Shi Ying</div>
+
+      <!-- Center: Navigation Menu -->
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li class="active"><a href="skills.html">Skills</a></li>
+      </ul>
+
+      <!-- Right: Social Icons -->
+      <div class="nav-icons">
+        <a href="https://www.linkedin.com/in/shi-ying-tam-44abb6272/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/sshiyy" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:shiyingtam06@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <!-- Animated Sliding Marker -->
+      <div class="nav-marker"></div>
+    </nav>
+
+    <!-- Hero Content (Text Only) -->
+    <div class="hero-content container">
+      <div class="hero-left">
+        <!-- Decorative vertical line with a dot -->
+        <div class="decorative-line">
+          <div class="dot"></div>
+        </div>
+        <h1>Skills</h1>
+        <p>
+          Discover the technical skills and tools I excel in—from programming languages and frameworks to modern development practices.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content for Skills Page -->
+  <section class="main-content container">
+    <h2>My Skills</h2>
+    <p>
+      I am proficient in a variety of technologies including HTML, CSS, JavaScript, and more. I enjoy learning new programming languages and staying updated with the latest in software engineering.
+    </p>
+    <!-- Additional skills details go here -->
+  </section>
+
+  <script>
+    // Animated Sliding Marker Script
+    const navMenu = document.querySelector('.nav-menu');
+    const marker = document.querySelector('.nav-marker');
+    const navItems = document.querySelectorAll('.nav-menu li');
+
+    function updateMarker(element) {
+      marker.style.left = element.offsetLeft + 'px';
+      marker.style.width = element.offsetWidth + 'px';
+    }
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        updateMarker(item);
+      });
+    });
+
+    window.addEventListener('load', () => {
+      const activeItem = document.querySelector('.nav-menu li.active');
+      if (activeItem) updateMarker(activeItem);
+    });
+
+    window.addEventListener('resize', () => {
+      const activeItem = document.querySelector('.nav-menu li.active');
+      if (activeItem) updateMarker(activeItem);
+    });
+  </script>
+</body>
+</html>

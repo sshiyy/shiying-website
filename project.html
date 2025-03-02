@@ -23,7 +23,7 @@
       width: 100%;
       height: 100%;
       overflow: auto;
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0, 0, 0, 0.5);
     }
     /* Modal Content Box */
     .modal-content {
@@ -34,6 +34,24 @@
       max-width: 600px;
       border-radius: 8px;
       position: relative;
+      overflow: hidden; /* To hide images that are not active */
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      height: 300px; /* Set a fixed height */
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+
+    .carousel-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .tech-stack {
       background-color: #ffffff;
@@ -256,9 +274,17 @@
   <div id="modal-project7" class="modal">
     <div class="modal-content">
       <h3>🏧 ATM Withdrawal System</h3>
-      <p>
-        A secure ATM withdrawal system featuring advanced functionalities, built with Node.js, Firebase, Express, React.js, and JavaScript.
-      </p>
+      <p>A secure ATM withdrawal system featuring advanced functionalities, built with Node.js, Firebase, Express, React.js, and JavaScript.</p>
+
+      <!-- Carousel Container -->
+      <div class="carousel-container">
+        <div class="carousel-images">
+          <img src="images/ocbc.png" alt="ATM Image 1">
+          <img src="images/ocbc1.png" alt="ATM Image 2">
+          <img src="images/ocbc2.png" alt="ATM Image 3">
+          <img src="images/ocbc3.png" alt="ATM Image 4">
+        </div>
+      </div>
     </div>
   </div>
 
@@ -313,6 +339,19 @@
         }
       });
     });
+
+    // Carousel: Auto-scroll images
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-images img');
+    const totalImages = images.length;
+
+    function changeImage() {
+      currentIndex = (currentIndex + 1) % totalImages;  // Loop back to the first image
+      const offset = -currentIndex * 100;  // Move the carousel to the next image
+      document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+    }
+
+    setInterval(changeImage, 3000); // Change image every 3 seconds
   </script>
 </body>
 </html>

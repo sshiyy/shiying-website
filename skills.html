@@ -22,38 +22,38 @@
       margin-top: 30px; /* Adjusted margin */
       justify-content: center; /* Center the circles */
     }
-  
+
     .skill-circle {
       position: relative;
       width: 120px; /* Increased size */
       height: 120px; /* Increased size */
       margin: 20px; /* Adjusted margin */
     }
-  
+
     .skill-circle svg {
       transform: rotate(-90deg);
       width: 120px; /* Increased size */
       height: 120px; /* Increased size */
     }
-  
+
     /* The background circle */
     .skill-circle circle.bg {
       fill: none;
       stroke: #eee;
       stroke-width: 12; /* Increased stroke width */
     }
-  
+
     /* The colored circle that shows progress */
     .skill-circle circle.progress {
       fill: none;
       stroke-width: 12; /* Increased stroke width */
       stroke-linecap: round;
-      stroke: #fff4f8; /* Adjust color if you want a different accent */
+      stroke: #f8bad1; /* Adjust color if you want a different accent */
       stroke-dasharray: 226; /* 2 * PI * 36 ~ 226 */
       stroke-dashoffset: 226; /* fully hidden default */
       transition: stroke-dashoffset 1s ease;
     }
-  
+
     /* Centered text inside the circle */
     .skill-text {
       position: absolute;
@@ -64,7 +64,7 @@
       font-weight: bold;
       color: #333;
     }
-  
+
     /* Skill Label under each circle */
     .skill-label {
       text-align: center;
@@ -72,6 +72,116 @@
       font-size: 1rem;
       color: #333;
     }
+
+    /* Tools & Technologies Section */
+    section.main-content.container {
+      margin-top: 50px; /* Adjust this value to create the desired gap */
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Creates responsive grid */
+      gap: 20px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    /* Tool Card */
+    .tool-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #f4f4f4;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Tool Card Hover Effect */
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .tool-card i {
+      font-size: 40px; /* Icon size */
+      color: #f8bad1;
+      margin-bottom: 10px;
+    }
+
+    .tool-card h3 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* Soft Skills Section */
+  #skills {
+    margin-top: 50px; /* Adjust the gap from the top */
+  }
+
+  #skills h2 {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  #skills p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px; /* More space between the description and the skills */
+    text-align: center;
+  }
+
+  /* Container for all the skill cards */
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive layout */
+    gap: 20px;
+    justify-items: center; /* Center align the cards */
+  }
+
+  /* Individual Skill Card */
+  .skill-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Hover effect for skill cards */
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Icon styling */
+  .skill-card .icon {
+    font-size: 40px; /* Icon size */
+    color: #f8bad1;
+    margin-bottom: 10px;
+  }
+
+  /* Title and description styling */
+  .skill-card h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .skill-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+
   </style>
 </head>
 <body>
@@ -128,7 +238,6 @@
   <!-- Soft Skills & Strengths -->
   <section class="main-content container">
     <h2>💻 Technical Proficiency</h2>
-    <p>Below are some of my core proficiencies, expressed as approximate confidence levels:</p>
     <div class="tech-proficiency">
       <!-- Circle #1 -->
       <div class="skill-circle">
@@ -203,18 +312,119 @@
     </div>
   </section>
 
-  <!-- Tools & Technologies -->
+  <!-- Tools & Technologies Section -->
   <section class="main-content container">
     <h2>🛠️ Tools & Technologies</h2>
-    <p>Here are the technologies I frequently use for developing web and mobile applications:</p>
-    <ul>
-      <li>🖥️ <strong>Languages:</strong> JavaScript, Python, C++, Java, HTML, CSS</li>
-      <li>🌐 <strong>Web Development:</strong> React.js, Node.js, Express, Firebase</li>
-      <li>📱 <strong>Mobile Development:</strong> Android Studio (Java)</li>
-      <li>💾 <strong>Databases:</strong> MySQL, Firebase Firestore</li>
-      <li>🛠️ <strong>Other Tools:</strong> Visual Studio Code, Visual Studio 2022, GitHub, Figma, Postman, Canva</li>
-    </ul>
+    
+    <h3>Languages</h3>
+    <div class="tools-grid">
+      <!-- Languages -->
+      <div class="tool-card">
+        <i class="fab fa-js-square"></i>
+        <h3>JavaScript</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fab fa-python"></i>
+        <h3>Python</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fab fa-cuttlefish"></i> <!-- You can replace this with a C++ logo or similar -->
+        <h3>C++</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fab fa-java"></i>
+        <h3>Java</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fab fa-c-sharp"></i> <!-- C# icon -->
+        <h3>C#</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fab fa-html5"></i>
+        <h3>HTML</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fab fa-css3-alt"></i>
+        <h3>CSS</h3>
+      </div>
+    </div>
+
+    <h3>Tools</h3>
+    <div class="tools-grid">
+      <!-- Tools -->
+      <div class="tool-card">
+        <i class="fab fa-react"></i>
+        <h3>React.js</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fab fa-node"></i>
+        <h3>Node.js</h3>
+      </div>
+      <div class="tool-card">
+        <i class=""></i> <!-- Firebase icon can also be used -->
+        <h3>Firebase</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fas fa-cogs"></i> <!-- Adjust as needed, or replace with Figma icon -->
+        <h3>Visual Studio Code</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fab fa-android"></i> <!-- Android Studio icon -->
+        <h3>Android Studio</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fab fa-github"></i> <!-- GitHub icon -->
+        <h3>GitHub</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fas fa-plug"></i> <!-- Postman icon (you can use the Postman logo if available) -->
+        <h3>Postman</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fab fa-canva"></i> <!-- Canva icon -->
+        <h3>Canva</h3>
+      </div>
+      <div class="tool-card">
+        <i class="fab fa-fig"></i> 
+        <h3>Figma</h3>
+      </div>
+    </div>
   </section>
+
+  <!-- Soft Skills & Strengths Section -->
+<section id="skills" class="main-content container">
+    <h2>💡 Soft Skills & Strengths</h2>
+
+    <!-- Skill Cards -->
+    <div class="skills-container">
+        <div class="skill-card">
+            <div class="icon">🤝</div>
+            <h3>Teamwork</h3>
+            <p>Collaborative and effective in group projects</p>
+        </div>
+        <div class="skill-card">
+            <div class="icon">⏳</div>
+            <h3>Time Management</h3>
+            <p>Efficient at meeting deadlines and managing workload</p>
+        </div>
+        <div class="skill-card">
+            <div class="icon">🎯</div>
+            <h3>Problem-Solving</h3>
+            <p>Analytical thinker with a solutions-driven mindset</p>
+        </div>
+        <div class="skill-card">
+            <div class="icon">🗣️</div>
+            <h3>Communication</h3>
+            <p>Clear and effective communicator in both technical and non-technical discussions</p>
+        </div>
+        <div class="skill-card">
+            <div class="icon">⚡</div>
+            <h3>Adaptability</h3>
+            <p>Quick learner and open to new technologies</p>
+        </div>
+    </div>
+</section>
+
 
   <script>
     // Animated Sliding Marker Script

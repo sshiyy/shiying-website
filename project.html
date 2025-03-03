@@ -29,9 +29,9 @@
     .modal-content {
       background-color: #fff;
       margin: 10% auto; /* Centers modal vertically */
-      padding: 20px;
+      padding: 40px;
       width: 80%;
-      max-width: 600px;
+      max-width: 800px; /* Increased size */
       border-radius: 8px;
       position: relative;
       overflow: hidden; /* To hide images that are not active */
@@ -41,6 +41,8 @@
       position: relative;
       width: 100%;
       height: 300px; /* Set a fixed height */
+      margin-bottom: 90px;
+      margin-top: 30px;
     }
 
     .carousel-images {
@@ -82,6 +84,25 @@
 .project-links a {
   display: block; /* Make each link take full width */
 }
+
+ /* New Features Section */
+ .features {
+      margin-top: 20px;
+    }
+
+    .features h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .features ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .features ul li {
+      margin-bottom: 10px;
+    }
 
   </style>
 </head>
@@ -214,62 +235,162 @@
 
   <!-- Modals for Projects -->
   <!-- Modal for Project 1 -->
-  <div id="modal-project1" class="modal">
-    <div class="modal-content">
-      <h3>🎬 Movie Application</h3>
-      <p>
-        This movie application provides detailed information about Southeast Asian films, including trailers and ratings.
-        Built using HTML, CSS, and MySQL.
-      </p>
+<div id="modal-project1" class="modal">
+  <div class="modal-content">
+    <h3>🎬 Movie Application</h3>
+    <p>
+      This movie application provides detailed information about Southeast Asian films, including trailers and ratings.
+      Built using HTML, CSS, and MySQL.
+    </p>
+    
+    <!-- Features Section -->
+    <div class="features">
+      <h4>Features for Users:</h4>
+      <ul>
+        <li>View Southeast Asia movies with detailed information.</li>
+        <li>Watch trailers of selected movies.</li>
+        <li>View ratings and reviews for each movie.</li>
+        <li>Join communities to discuss movies with fellow enthusiasts.</li>
+      </ul>
+
+      <h4>Features for Developers:</h4>
+      <ul>
+        <li>Add new movies to the database.</li>
+        <li>Remove movies from the database.</li>
+        <li>Update movie details such as title, description, and genre.</li>
+      </ul>
     </div>
   </div>
-  <!-- Modal for Project 2 -->
-  <div id="modal-project2" class="modal">
-    <div class="modal-content">
-      <h3>☕ Eric Chou Café</h3>
-      <p>
-        A café management system inspired by Eric Chou, offering an intuitive interface for managing café operations.
-        Built with HTML and CSS.
-      </p>
+</div>
+
+<!-- Modal for Project 2 -->
+<div id="modal-project2" class="modal">
+  <div class="modal-content">
+    <h3>☕ Eric Chou Café</h3>
+    <p>
+      A café management system inspired by Eric Chou, offering an intuitive interface for managing café operations.
+      Built with HTML and CSS.
+    </p>
+    
+    <!-- Features Section -->
+    <div class="features">
+      <h4>Features for Users:</h4>
+      <ul>
+        <li>Play a fun game to earn points that can be used for discounts or rewards.</li>
+        <li>View the café menu and place orders easily.</li>
+        <li>Explore Eric Chou's latest album and music.</li>
+      </ul>
+
+      <h4>Features for Developers:</h4>
+      <ul>
+        <li>Add and manage menu items (food and drinks).</li>
+        <li>Track user points and manage rewards system.</li>
+        <li>Update the album content with new songs or albums from Eric Chou.</li>
+        <li>Maintain the café's operational data and user orders.</li>
+      </ul>
     </div>
   </div>
-  <!-- Modal for Project 3 -->
-  <div id="modal-project3" class="modal">
-    <div class="modal-content">
-      <h3>🍦 Ice Cream Shop Ordering System</h3>
-      <p>
-        An interactive ordering system for an ice cream shop developed in C#. It simplifies order processing and enhances customer experience.
-      </p>
+</div>
+
+<!-- Modal for Project 3 -->
+<div id="modal-project3" class="modal">
+  <div class="modal-content">
+    <h3>🍦 Ice Cream Shop Ordering System</h3>
+    <p>
+      An interactive ordering system for an ice cream shop developed in C#. It simplifies order processing and enhances the cashier's workflow.
+    </p>
+    
+    <!-- Features Section -->
+    <div class="features">
+      <h4>Features for Cashiers:</h4>
+      <ul>
+        <li>Take customer orders for various ice cream flavors and toppings.</li>
+        <li>Check if the customer is a member and view their membership status.</li>
+        <li>Check and display the customer's current points balance.</li>
+        <li>Allow customers to redeem their points for discounts on their order.</li>
+        <li>Calculate the total order cost, including any discounts applied from points.</li>
+        <li>Manage order history and track past customer transactions.</li>
+        <li>Print receipts for customers, including their points and order details.</li>
+      </ul>
     </div>
   </div>
-  <!-- Modal for Project 4 -->
-  <div id="modal-project4" class="modal">
-    <div class="modal-content">
-      <h3>🍱 F&amp;B App</h3>
-      <p>
-        A full-fledged F&amp;B application for food ordering and menu management, built using Java, Android Studio, and Firebase.
-      </p>
+</div>
+
+
+
+<!-- Modal for Project 4 -->
+<div id="modal-project4" class="modal">
+  <div class="modal-content">
+    <h3>🍱 F&B App</h3>
+    <p>
+      A full-fledged F&B application for food ordering and menu management, built using Java, Android Studio, and Firebase.
+    </p>
+    
+    <!-- Features Section -->
+    <div class="features">
+      <h4>Features for Users:</h4>
+      <ul>
+        <li>Place food orders for delivery or dine-in based on preference.</li>
+        <li>Create an account to save your orders, preferences, and payment methods.</li>
+        <li>Earn points with every purchase and redeem them for discounts.</li>
+        <li>Use the shop locator to find nearby restaurant locations.</li>
+      </ul>
+
+      <h4>Features for Developers:</h4>
+      <ul>
+        <li>Manage the menu by adding, updating, and removing food items.</li>
+        <li>Track user accounts and manage user information such as orders and points.</li>
+        <li>Implement a point system for users, allowing them to accumulate and redeem points for rewards.</li>
+        <li>Integrate shop locator functionality to help users find nearby locations.</li>
+        <li>Maintain the app's back-end database using Firebase for order and user data management.</li>
+      </ul>
     </div>
   </div>
-  <!-- Modal for Project 5 -->
-  <div id="modal-project5" class="modal">
-    <div class="modal-content">
-      <h3>💄 Beauty &amp; Skincare Web</h3>
-      <p>
-        An e-commerce platform for browsing and purchasing beauty products, designed with a user-friendly interface using HTML and CSS.
-      </p>
+</div>
+
+<!-- Modal for Project 5 -->
+<div id="modal-project5" class="modal">
+  <div class="modal-content">
+    <h3>💄 Beauty &amp; Skincare Web</h3>
+    <p>
+      An e-commerce platform for browsing and purchasing beauty products, designed with a user-friendly interface using HTML and CSS.
+    </p>
+    
+    <!-- Features Section -->
+    <div class="features">
+      <h4>Features for Users:</h4>
+      <ul>
+        <li>Create an account to track your orders and save your preferences.</li>
+        <li>Browse through a wide range of skincare products and view their details.</li>
+        <li>View product prices and descriptions before making a purchase.</li>
+      </ul>
     </div>
   </div>
-  <!-- Modal for Project 6 -->
-  <div id="modal-project6" class="modal">
-    <div class="modal-content">
-      <h3>🍔 F&amp;B Queuing App</h3>
-      <p>
-        A prototype providing queue times for F&amp;B shops along with pre-ordering functionality.
-        Created as a UI/UX prototype in Figma.
-      </p>
+</div>
+
+<!-- Modal for Project 6 -->
+<div id="modal-project6" class="modal">
+  <div class="modal-content">
+    <h3>🍔 F&amp;B Queuing App</h3>
+    <p>
+      An app that provides queue times for F&amp;B shops and pre-ordering options, allowing users to manage their dining experience more conveniently.
+    </p>
+    
+    <!-- Features Section -->
+    <div class="features">
+      <h4>Features for Users:</h4>
+      <ul>
+        <li>Create an account to track your orders, queue times, and dining preferences.</li>
+        <li>Book a table in advance for dine-in orders.</li>
+        <li>Order food for self-pickup if you're not dining in.</li>
+        <li>Order for dine-in with a clear indication of wait times and queue numbers.</li>
+        <li>Receive a queue number and track your place in the line in real-time.</li>
+        <li>View real-time updates of the queue and receive notifications when your table is ready.</li>
+      </ul>
     </div>
   </div>
+</div>
+
   <!-- Modal for Project 7 -->
   <div id="modal-project7" class="modal">
     <div class="modal-content">
@@ -284,6 +405,16 @@
           <img src="images/ocbc2.png" alt="ATM Image 3">
           <img src="images/ocbc3.png" alt="ATM Image 4">
         </div>
+      </div>
+      <div class="features">
+        <h4>Features:</h4>
+        <ul>
+          <li>Digital receipt instead of physical receipt</li>
+          <li>NFC login, Face recognition, QR code login</li>
+          <li>Pre-withdrawal</li>
+          <li>Chatbot</li>
+          <li>Foreign exchange</li>
+        </ul>
       </div>
     </div>
   </div>
